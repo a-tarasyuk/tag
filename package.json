@@ -2,7 +2,7 @@
   "name": "tag",
   "description": "Small utility for creating DOM elements",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "devDependencies": {
     "broccoli": "0.12.0",
     "broccoli-uglify-js": "~0.1.3",
