@@ -4,7 +4,7 @@
   "main": "dist/tag.js",
   "ignore": [
     ".gitignore",
-    "test"
+    "test",
     "karma.conf.js",
     "lib",
     "Brocfile.js",
