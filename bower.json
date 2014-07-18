@@ -1,0 +1,13 @@
+{
+  "name": "tag",
+  "version": "0.0.1",
+  "main": "dist/tag.js",
+  "ignore": [
+    ".gitignore",
+    "test"
+    "karma.conf.js",
+    "lib",
+    "Brocfile.js",
+    "package.json"
+  ]
+}
