@@ -7,6 +7,10 @@ Small utility for creating DOM elements
 bower install tag 
 ```
 
+```shell
+npm install d-tag 
+```
+
 ```html
 <script src="tag.js"></script> 
 ```
@@ -45,5 +49,5 @@ tags.div({id: 'content'}, [tags.span('content')])
 ```
 
 ### Release History
-
+- 0.0.5 Add support CommonJS 
 - First Release
