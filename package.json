@@ -1,5 +1,5 @@
 {
-  "name": "tag",
+  "name": "dom-tag",
   "repository": {
     "type": "git",
     "url": "https://github.com/a-tarasyuk/tag.git"
@@ -9,8 +9,7 @@
   "version": "0.0.3",
   "scripts": {
     "tests": "node_modules/.bin/karma start",
-    "build": "rm -rf dist/ && node_modules/.bin/broccoli build dist",
-    "publish": "npm run tests && npm run build && npm publish"
+    "build": "rm -rf dist/ && node_modules/.bin/broccoli build dist"
   },
 
   "devDependencies": {
