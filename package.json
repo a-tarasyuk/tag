@@ -7,6 +7,12 @@
   "description": "Small utility for creating DOM elements",
   "license": "MIT",
   "version": "0.0.3",
+  "scripts": {
+    "tests": "node_modules/.bin/karma start",
+    "build": "rm -rf dist/ && node_modules/.bin/broccoli build dist",
+    "publish": "npm run tests && npm run build && npm publish"
+  },
+
   "devDependencies": {
     "broccoli": "0.16.9",
     "broccoli-static-compiler": "~0.2.2",
