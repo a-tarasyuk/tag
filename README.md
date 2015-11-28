@@ -8,7 +8,7 @@ bower install tag --save
 ```
 
 ```shell
-npm install @a-tarasyuk/tag --save
+npm install d-tag --save
 ```
 
 ```html
@@ -49,7 +49,7 @@ tags.div({id: 'content'}, [tags.span('content')])
 ```
 
 ### Release History
-- 0.0.9 Change npm package name
+- 0.1.0 Change npm package name
 - 0.0.6 Publish package to https://www.npmjs.com/ (name **d-tag**) 
 - 0.0.5 Add support CommonJS
 - First Release
