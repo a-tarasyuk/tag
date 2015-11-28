@@ -1,17 +1,29 @@
 {
-  "name": "dom-tag",
+  "name": "d-tag",
+  "author": {
+    "name": "Alexander Tarasyuk",
+    "email": "alexander.v.tarasyuk@gmail.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/a-tarasyuk/tag.git"
   },
+  "bugs": {
+    "url": "https://github.com/a-tarasyuk/tag/issues"
+  },
+  "keywords": [
+    "dom",
+    "html",
+    "tags"
+  ],
   "description": "Small utility for creating DOM elements",
   "license": "MIT",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "tests": "node_modules/.bin/karma start",
     "build": "rm -rf dist/ && node_modules/.bin/broccoli build dist"
   },
-
+  "readmeFilename": "README.md",
   "devDependencies": {
     "broccoli": "0.16.9",
     "broccoli-static-compiler": "~0.2.2",
