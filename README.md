@@ -49,5 +49,6 @@ tags.div({id: 'content'}, [tags.span('content')])
 ```
 
 ### Release History
-- 0.0.5 Add support CommonJS 
+- 0.0.6 Publish package to https://www.npmjs.com/ (name **d-tag**) 
+- 0.0.5 Add support CommonJS
 - First Release
