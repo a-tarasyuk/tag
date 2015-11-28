@@ -1,8 +1,8 @@
 {
-  "name": "d-tag",
+  "name": "@a-tarasyuk/tag",
   "description": "Small utility for creating DOM elements",
   "license": "MIT",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": {
     "name": "Alexander Tarasyuk",
     "email": "alexander.v.tarasyuk@gmail.com"

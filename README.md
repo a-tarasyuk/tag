@@ -8,7 +8,7 @@ bower install tag
 ```
 
 ```shell
-npm install d-tag 
+npm install tag 
 ```
 
 ```html
