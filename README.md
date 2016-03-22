@@ -1,6 +1,5 @@
-# tag 
-
-Small utility for creating DOM elements
+# tag
+> Library for creating DOM elements
 
 ### Installation
 ```shell
@@ -12,44 +11,29 @@ npm install d-tag --save
 ```
 
 ```html
-<script src="tag.js"></script> 
+<script src="tag.js"></script>
 ```
-
-### Usage
-
-*Basic usage*
+## `tag(name, *attributes, children)`
+* **Parameters**
+    - **name**: String  
+    - **attributes**: Object (optional)
+    - **children**: Array | String
+### Example
 
 ```js
-tag('div', {id: 'content'}, 'content')
-tag('div', {id: 'content'}, [tag('span', 'content')])
-tag('div', {id: 'content'}, [tag('span', '<strong>content</strong>')])
-```
+tag('div', { id: 'content' }, 'content')
 
-```js
-var tags = tag(['div', 'span'])
-tags.div({id: 'content'}, 'content')
-tags.div({id: 'content'}, [tags.span('content')])
-```
+tag('div', { id: 'content' }, [
+  tag('span', 'content')
+])
 
-*Also you can init all tags which you need and after use their as functions in global scope,*
-```js
-tag(['div', 'span'], true)
-
-div({id: 'content'}, 'content')
-div({id: 'content'}, [span('content')])
-```
-
-*and also you can set custom namespace*
-
-```js
-tag(['div', 'span'], true, 'tags')
-
-tags.div({id: 'content'}, 'content')
-tags.div({id: 'content'}, [tags.span('content')])
+tag('div', [
+  tag('span', '<strong>content</strong>')
+])
 ```
 
 ### Release History
-- 0.1.0 Change npm package name
-- 0.0.6 Publish package to https://www.npmjs.com/ (name **d-tag**) 
-- 0.0.5 Add support CommonJS
-- First Release
+- 0.2.0 Removed namespaces
+- 0.1.0 Changed npm package name
+- 0.0.6 Published package to https://www.npmjs.com/ (name **d-tag**)
+- 0.0.5 Added support CommonJS
