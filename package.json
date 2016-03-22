@@ -1,6 +1,6 @@
 {
   "name": "d-tag",
-  "description": "Small utility for creating DOM elements",
+  "description": "Library for creating DOM elements",
   "license": "MIT",
   "version": "0.2.0",
   "author": {
@@ -21,7 +21,7 @@
   ],
   "main": "lib/tag.js",
   "scripts": {
-    "tests": "node_modules/.bin/karma start",
+    "test": "node_modules/.bin/karma start",
     "build": "rm -rf dist/ && node_modules/.bin/broccoli build dist"
   },
   "readmeFilename": "README.md",
