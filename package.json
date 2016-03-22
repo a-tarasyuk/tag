@@ -2,7 +2,7 @@
   "name": "d-tag",
   "description": "Library for creating DOM elements",
   "license": "MIT",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": {
     "name": "Alexander Tarasyuk",
     "email": "alexander.v.tarasyuk@gmail.com"
