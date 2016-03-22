@@ -18,6 +18,8 @@ npm install d-tag --save
     - **name**: String  
     - **attributes**: Object (optional)
     - **children**: Array | String
+*  **Returns** - HTMLElement
+
 ### Example
 
 ```js
