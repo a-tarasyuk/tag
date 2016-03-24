@@ -32,6 +32,13 @@ tag('div', { id: 'content' }, [
 tag('div', [
   tag('span', '<strong>content</strong>')
 ])
+
+tag('hr')
+
+tag('label', [
+  tag('input', { type: 'text' }),
+  'Label text'
+])
 ```
 
 ### Release History
