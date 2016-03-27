@@ -7,7 +7,7 @@ bower install tag --save
 ```
 
 ```shell
-npm install d-tag --save
+npm install tag --save
 ```
 
 ```html
@@ -42,6 +42,7 @@ tag('label', [
 ```
 
 ### Release History
+- 0.3.0 Changed npm name from d-tag to tag
 - 0.2.0 Removed namespaces
 - 0.1.0 Changed npm package name
 - 0.0.6 Published package to https://www.npmjs.com/ (name **d-tag**)

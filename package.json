@@ -1,8 +1,8 @@
 {
-  "name": "d-tag",
+  "name": "tag",
   "description": "Library for creating DOM elements",
   "license": "MIT",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "author": {
     "name": "Alexander Tarasyuk",
     "email": "alexander.v.tarasyuk@gmail.com"
@@ -19,7 +19,7 @@
     "html",
     "tags"
   ],
-  "main": "lib/tag.js",
+  "main": "build/tag.js",
   "scripts": {
     "test": "node_modules/.bin/karma start",
     "build": "node_modules/.bin/webpack"
