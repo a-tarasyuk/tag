@@ -55,5 +55,13 @@ suite('tag', function () {
 
       assert.strictEqual(container.innerHTML, '<label><input>text</label>');
     });
+
+    test('should support nested attributes with prefixes', () => {
+      container.appendChild(
+        tag('div', { data: { test: 'stuff' } }, 'content')
+      );
+
+      assert.strictEqual(container.innerHTML, '<div data-test="stuff">content</div>');
+    });
   });
 });
