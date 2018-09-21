@@ -20,7 +20,7 @@ const VOID_TAGS = [
   'param',
   'source',
   'track',
-  'wbr'
+  'wbr',
 ];
 
 /**
@@ -98,8 +98,8 @@ function append(element, content) {
  */
 function createElement(tagName) {
   return function (...args) {
-    const element = document.createElement(tagName);
-    const attrs = isObject(args[0]) ? args[0] : {};
+    const element  = document.createElement(tagName);
+    const attrs    = isObject(args[0]) ? args[0] : {};
     const children = args.length === 2 ? args[1] : args[0];
 
     Object
@@ -118,12 +118,12 @@ function createElement(tagName) {
   };
 }
 
-export function tag(...args) {
+export default (...args) => {
   const root = args[0];
   const children = args.slice(1);
 
   if (!isString(root)) {
-    throw new Error('first argument must be String and can not be empty');
+    throw new Error('Tag Error:: First argument must be String and can not be empty');
   }
 
   return createElement(root).apply(null, children);

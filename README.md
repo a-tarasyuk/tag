@@ -1,28 +1,31 @@
 # tag
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/a-tarasyuk/tag/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/tag.svg?style=flat-square)](https://www.npmjs.com/package/tag) [![npm downloads](https://img.shields.io/npm/dm/tag.svg?style=flat-square)](https://www.npmjs.com/package/tag) [![Build Status](https://img.shields.io/travis/a-tarasyuk/tag/master.svg?style=flat-square)](https://travis-ci.org/a-tarasyuk/tag) [![David](https://img.shields.io/david/a-tarasyuk/tag.svg?style=flat-square)](https://github.com/a-tarasyuk/tag) [![David](https://img.shields.io/david/dev/a-tarasyuk/tag.svg?style=flat-square)](https://github.com/a-tarasyuk/tag)
+
 > Library for creating DOM elements
 
-### Installation
-```shell
-bower install tag --save
-```
+
+## Installation
 
 ```shell
 npm install tag --save
 ```
 
 ```html
-<script src="tag.js"></script>
+<script src="tag.umd.js"></script>
 ```
 ## `tag(name, *attributes, children)`
 * **Parameters**
-    - **name**: String  
+    - **name**: String
     - **attributes**: Object (optional)
     - **children**: Array | String
 *  **Returns** - HTMLElement
 
-### Example
+## Example
 
-```js
+```javascript
+import tag from 'tag';
+
 tag('div', { id: 'content' }, 'content')
 
 tag('div', { id: 'content' }, [
@@ -40,10 +43,3 @@ tag('label', [
   'Label text'
 ])
 ```
-
-### Release History
-- 0.3.0 Changed npm name from d-tag to tag
-- 0.2.0 Removed namespaces
-- 0.1.0 Changed npm package name
-- 0.0.6 Published package to https://www.npmjs.com/ (name **d-tag**)
-- 0.0.5 Added support CommonJS

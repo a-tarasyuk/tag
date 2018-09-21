@@ -1,38 +1,29 @@
 module.exports = function(config) {
-  config.set({
-    basePath: '',
-    frameworks: ['mocha', 'chai'],
+	config.set({
+	  files: [{
+      pattern: 'test/**/*.spec.js', watched: false,
+    }],
 
-    files: [
-      'tests.webpack.js'
-    ],
-
-    client: {
-      mocha: { ui: 'tdd' }
+	  preprocessors: {
+		  'test/**/*.spec.js': ['rollup']
     },
 
-    preprocessors: {
-      'tests.webpack.js': ['webpack']
-    },
-
-    reporters: ['progress'],
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_INFO,
+    frameworks: ['jasmine'],
     autoWatch: true,
-    browsers: ['Chrome', 'Firefox'],
-    singleRun: true,
+	  reporters: ['spec'],
+	  logLevel: config.LOG_INFO,
+    basePath: '',
+	  colors: true,
+    port: 9876,
 
-    webpack: {
-      module: {
-        loaders: [
-          { test: /\.js$/, exclude: /node_modules/, loader: 'babel' }
-        ]
-      }
+    rollupPreprocessor: {
+			plugins: [require('rollup-plugin-buble')()],
+			output: { format: 'iife', name: 'tag', sourcemap: 'inline' }
     },
 
-    webpackMiddleware: {
-      noInfo: true
-    }
-  });
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: { base: 'ChromeHeadless', flags: ['--no-sandbox'] }
+    },
+
+  })
 };
