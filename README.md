@@ -24,6 +24,8 @@ npm install tag --save
 ## Example
 
 ```javascript
+import tag from 'tag';
+
 tag('div', { id: 'content' }, 'content')
 
 tag('div', { id: 'content' }, [

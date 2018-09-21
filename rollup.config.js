@@ -6,9 +6,10 @@ import pkg from './package.json';
 export default [{
   input: 'src/tag.js',
   output: {
-    name: 'howLongUntilLunch',
-    file: pkg.browser,
+    interop: false,
     format: 'umd',
+    name: 'tag',
+    file: pkg.browser,
   },
   plugins: [
     eslint(),

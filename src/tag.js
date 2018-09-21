@@ -118,7 +118,7 @@ function createElement(tagName) {
   };
 }
 
-export const tag = (...args) => {
+export default (...args) => {
   const root = args[0];
   const children = args.slice(1);
 

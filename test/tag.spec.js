@@ -1,4 +1,4 @@
-import { tag } from '../src/tag.js';
+import tag from '../src/tag.js';
 
 describe('tag', function () {
   const container = document.createElement('div');
