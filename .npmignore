@@ -1,0 +1,5 @@
+test
+src
+.travis.yml
+karma.conf.js
+rollup.config.js
