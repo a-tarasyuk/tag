@@ -13,7 +13,7 @@ describe('tag', function () {
   beforeEach(() => clear());
 
   it('should be error if first argument is not String', () => {
-    expect(() => tag()).toThrowError('first argument must be String and can not be empty');
+    expect(() => tag()).toThrowError('Tag Error:: First argument must be String and can not be empty');
   });
 
   it('should be created new div', () => {
