@@ -46,5 +46,8 @@
     "rollup-plugin-commonjs": "9.1.8",
     "rollup-plugin-eslint": "5.0.0",
     "rollup-plugin-terser": "3.0.0"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.2"
   }
 }
