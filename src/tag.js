@@ -1,7 +1,7 @@
 /**
  * Tag - Library for creating DOM elements
  *
- * (c) Alexander Tarasyuk <alexander.v.tarasyuk@gmail.com>
+ * (c) Alexander Tarasyuk <alexander.tarasyuk@outlook.com>
  */
 
 const VOID_TAGS = [
@@ -123,7 +123,7 @@ export default (...args) => {
   const children = args.slice(1);
 
   if (!isString(root)) {
-    throw new Error('Tag Error:: First argument must be String and can not be empty');
+    throw new Error('[tag] First argument must be String and can not be empty');
   }
 
   return createElement(root).apply(null, children);
