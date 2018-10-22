@@ -1,20 +1,20 @@
-import commonjs from 'rollup-plugin-commonjs';
 import { eslint } from 'rollup-plugin-eslint';
-import { terser } from 'rollup-plugin-terser';
+import { uglify } from 'rollup-plugin-uglify';
+import babel from 'rollup-plugin-babel'
 import pkg from './package.json';
 
 export default [{
   input: 'src/tag.js',
   output: {
     interop: false,
-    format: 'umd',
+    format: 'iife',
     name: 'tag',
     file: pkg.browser,
   },
   plugins: [
     eslint(),
-    commonjs(),
-    terser(),
+    babel({ exclude: 'node_modules/**' }),
+    uglify(),
   ]
 }, {
   input: 'src/tag.js',

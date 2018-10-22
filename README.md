@@ -9,8 +9,9 @@ npm install tag --save
 ```
 
 ```html
-<script src="tag.umd.js"></script>
+<script src="tag.iife.js"></script>
 ```
+
 ## `tag(name, *attributes, children)`
 * **Parameters**
     - **name**: String
