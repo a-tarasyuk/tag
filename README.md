@@ -46,4 +46,4 @@ tag('label', [
 
 ## License and Copyright
 
-This software is released under the terms of the [MIT license](https://github.com/a-tarasyuk/tag/blob/master/LICENSE.md).
+This software is released under the terms of the [MIT license](https://github.com/a-tarasyuk/tag/blob/master/LICENSE).
