@@ -1,12 +1,14 @@
 # tag
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/a-tarasyuk/tag/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/tag.svg?style=flat-square)](https://www.npmjs.com/package/tag) [![npm downloads](https://img.shields.io/npm/dm/tag.svg?style=flat-square)](https://www.npmjs.com/package/tag) [![Build Status](https://img.shields.io/travis/a-tarasyuk/tag/master.svg?style=flat-square)](https://travis-ci.org/a-tarasyuk/tag) [![David](https://img.shields.io/david/a-tarasyuk/tag.svg?style=flat-square)](https://github.com/a-tarasyuk/tag) [![David](https://img.shields.io/david/dev/a-tarasyuk/tag.svg?style=flat-square)](https://github.com/a-tarasyuk/tag) ![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/tag.svg?style=flat-square) ![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/tag.svg?style=flat-square)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/a-tarasyuk/tag/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/tag.svg?style=flat-square)](https://www.npmjs.com/package/tag) [![npm downloads](https://img.shields.io/npm/dm/tag.svg?style=flat-square)](https://www.npmjs.com/package/tag) [![Build Status](https://img.shields.io/travis/a-tarasyuk/tag/master.svg?style=flat-square)](https://travis-ci.org/a-tarasyuk/tag) ![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/tag.svg?style=flat-square) ![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/tag.svg?style=flat-square)
 
 ## Installation
 
 ```shell
 npm install tag --save
 ```
+
+or
 
 ```html
 <script src="tag.iife.js"></script>
@@ -41,3 +43,7 @@ tag('label', [
   'Label text'
 ])
 ```
+
+## License and Copyright
+
+This software is released under the terms of the [MIT license](https://github.com/a-tarasyuk/tag/blob/master/LICENSE.md).
