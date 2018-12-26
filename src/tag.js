@@ -24,15 +24,6 @@ const VOID_TAGS = [
 ];
 
 /**
- * isArray
- *
- * @param {*} value
- *
- * @return {Boolean}
- */
-const isArray = (value) => ({}).toString.call(value) === '[object Array]';
-
-/**
  * isElement
  *
  * @param {*} value
@@ -48,7 +39,7 @@ const isElement = (value) => !!(value && value.nodeType);
  *
  * @return {Boolean}
  */
-const isObject = (value) => value !== null && typeof (value) === 'object' && !isArray(value);
+const isObject = (value) => value !== null && typeof (value) === 'object' && !Array.isArray(value);
 
 /**
  * isString
@@ -104,10 +95,10 @@ function createElement(tagName) {
 
     Object
       .keys(attrs)
-      .forEach((name) => element.setAttribute(name, attrs[name]));
+      .forEach(name => element.setAttribute(name, attrs[name]));
 
-    if (isArray(children)) {
-      children.forEach((node) => append(element, node));
+    if (Array.isArray(children)) {
+      children.forEach(node => append(element, node));
     }
 
     if (isString(children) && !isVoidElement(tagName.toLowerCase())) {

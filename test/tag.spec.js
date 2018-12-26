@@ -12,39 +12,44 @@ describe('tag', function () {
 
   beforeEach(() => clear());
 
-  it('should be error if first argument is not String', () => {
+  it('checks if first argument is not String', () => {
     expect(() => tag()).toThrowError('[tag] First argument must be String and can not be empty');
   });
 
-  it('should be created new div', () => {
+  it('creats new DOMElement', () => {
     container.appendChild(tag('div'));
     expect(container.innerHTML).toEqual('<div></div>');
   });
 
-  it('should be created new div with content "test"', () => {
+  it('creates new DOMElement with content "test"', () => {
     container.appendChild(tag('div', 'test'));
     expect(container.innerHTML).toEqual('<div>test</div>');
   });
 
-  it('should be created new div with content "test" and child tag span which has content "child"', () => {
+  it('creates new DOMElement with content "test" and child DOMElement which has content "child"', () => {
     container.appendChild(tag('div', ['test', tag('span', 'child')]));
     expect(container.innerHTML).toEqual('<div>test<span>child</span></div>');
   });
 
-  it('should be created div with id="test" and class="test"', () => {
+  it('creates DOMElement with id="test" and class="test"', () => {
     const el = tag('div', { 'id': 'test', 'class': 'test' }, 'test');
 
     expect(el.className).toEqual('test');
     expect(el.getAttribute('id')).toEqual('test');
   });
 
-  it('should be created new void element', () => {
+  it('creates new void DOMElement', () => {
     container.appendChild(tag('input', 'text'));
     expect(container.innerHTML).toEqual('<input>');
   });
 
-  it('should be added text and an element as children together', () => {
+  it('adds text and DOMElement as children together', () => {
     container.appendChild(tag('label', [ tag('input'), 'text' ]));
     expect(container.innerHTML).toEqual('<label><input>text</label>');
+  });
+
+  it('creates DOMElement with string child', () => {
+    container.appendChild(tag('div', '<span>text</span><span>text</span>'));
+    expect(container.innerHTML).toEqual('<div><span>text</span><span>text</span></div>');
   });
 });
