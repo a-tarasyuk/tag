@@ -1,5 +1,7 @@
 test
 src
+.babelrc
+.eslintrc
 .travis.yml
 karma.conf.js
 rollup.config.js

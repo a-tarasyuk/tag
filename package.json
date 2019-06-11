@@ -2,7 +2,7 @@
   "name": "tag",
   "description": "Library for creating DOM elements",
   "license": "MIT",
-  "version": "0.4.10",
+  "version": "0.4.11",
   "author": {
     "name": "Alexander Tarasyuk",
     "email": "alexander.tarasyuk@outlook.com"
@@ -46,7 +46,7 @@
     "rollup": "1.12.3",
     "rollup-plugin-babel": "4.3.2",
     "rollup-plugin-buble": "0.19.6",
-    "rollup-plugin-eslint": "5.1.0",
+    "rollup-plugin-eslint": "6.0.0",
     "rollup-plugin-uglify": "6.0.2"
   }
 }
