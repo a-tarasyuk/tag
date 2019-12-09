@@ -1,4 +1,3 @@
-import { eslint } from 'rollup-plugin-eslint';
 import { uglify } from 'rollup-plugin-uglify';
 import babel from 'rollup-plugin-babel'
 import pkg from './package.json';
@@ -12,7 +11,6 @@ export default [{
     file: pkg.browser,
   },
   plugins: [
-    eslint(),
     babel({ exclude: 'node_modules/**' }),
     uglify(),
   ]
