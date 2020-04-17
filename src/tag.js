@@ -88,10 +88,10 @@ function append(element, content) {
  * @return {Function}
  */
 function createElement(tagName) {
-  return function (...args) {
+  return function (...props) {
     const element  = document.createElement(tagName);
-    const attrs    = isObject(args[0]) ? args[0] : {};
-    const children = args.length === 2 ? args[1] : args[0];
+    const attrs    = isObject(props[0]) ? props[0] : {};
+    const children = props.length === 2 ? props[1] : props[0];
 
     Object
       .keys(attrs)
@@ -109,13 +109,10 @@ function createElement(tagName) {
   };
 }
 
-export default (...args) => {
-  const root = args[0];
-  const children = args.slice(1);
-
-  if (!isString(root)) {
+export default (tagName, ...props) => {
+  if (!isString(tagName)) {
     throw new Error('[tag] First argument must be String and can not be empty');
   }
 
-  return createElement(root).apply(null, children);
+  return createElement(tagName).apply(null, props);
 }
