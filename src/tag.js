@@ -1,7 +1,7 @@
 /**
  * Tag - Library for creating DOM elements
  *
- * (c) Alexander Tarasyuk <alexander.tarasyuk@outlook.com>
+ * (c) Oleksandr Tarasiuk <oleksandr.tarasiuk@outlook.com>
  */
 
 const VOID_TAGS = [
@@ -39,7 +39,8 @@ const isElement = (value) => !!(value && value.nodeType);
  *
  * @return {Boolean}
  */
-const isObject = (value) => value !== null && typeof (value) === 'object' && !Array.isArray(value);
+const isObject = (value) =>
+  value !== null && typeof value === 'object' && !Array.isArray(value);
 
 /**
  * isString
@@ -48,7 +49,7 @@ const isObject = (value) => value !== null && typeof (value) === 'object' && !Ar
  *
  * @return {Boolean}
  */
-const isString = (value) => typeof (value) === 'string';
+const isString = (value) => typeof value === 'string';
 
 /**
  * isVoidElement
@@ -89,16 +90,16 @@ function append(element, content) {
  */
 function createElement(tagName) {
   return function (...props) {
-    const element  = document.createElement(tagName);
-    const attrs    = isObject(props[0]) ? props[0] : {};
+    const element = document.createElement(tagName);
+    const attrs = isObject(props[0]) ? props[0] : {};
     const children = props.length === 2 ? props[1] : props[0];
 
-    Object
-      .keys(attrs)
-      .forEach(name => element.setAttribute(name, attrs[name]));
+    Object.keys(attrs).forEach((name) =>
+      element.setAttribute(name, attrs[name]),
+    );
 
     if (Array.isArray(children)) {
-      children.forEach(node => append(element, node));
+      children.forEach((node) => append(element, node));
     }
 
     if (isString(children) && !isVoidElement(tagName.toLowerCase())) {
@@ -115,4 +116,4 @@ export default (tagName, ...props) => {
   }
 
   return createElement(tagName).apply(null, props);
-}
+};

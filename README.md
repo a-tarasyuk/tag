@@ -15,33 +15,27 @@ or
 ```
 
 ## `tag(name, *attributes, children)`
-* **Parameters**
-    - **name**: String
-    - **attributes**: Object (optional)
-    - **children**: Array | String
-*  **Returns** - HTMLElement
+
+- **Parameters**
+  - **name**: String
+  - **attributes**: Object (optional)
+  - **children**: Array | String
+- **Returns** - HTMLElement
 
 ## Example
 
 ```javascript
 import tag from 'tag';
 
-tag('div', { id: 'content' }, 'content')
+tag('div', { id: 'content' }, 'content');
 
-tag('div', { id: 'content' }, [
-  tag('span', 'content')
-])
+tag('div', { id: 'content' }, [tag('span', 'content')]);
 
-tag('div', [
-  tag('span', '<strong>content</strong>')
-])
+tag('div', [tag('span', '<strong>content</strong>')]);
 
-tag('hr')
+tag('hr');
 
-tag('label', [
-  tag('input', { type: 'text' }),
-  'Label text'
-])
+tag('label', [tag('input', { type: 'text' }), 'Label text']);
 ```
 
 ## License and Copyright

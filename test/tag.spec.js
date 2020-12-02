@@ -8,12 +8,14 @@ describe('tag', function () {
       container.removeChild(container.firstChild);
     }
     return container;
-  }
+  };
 
   beforeEach(() => clear());
 
   it('checks if first argument is not String', () => {
-    expect(() => tag()).toThrowError('[tag] First argument must be String and can not be empty');
+    expect(() => tag()).toThrowError(
+      '[tag] First argument must be String and can not be empty',
+    );
   });
 
   it('creats new DOMElement', () => {
@@ -32,7 +34,7 @@ describe('tag', function () {
   });
 
   it('creates DOMElement with id="test" and class="test"', () => {
-    const el = tag('div', { 'id': 'test', 'class': 'test' }, 'test');
+    const el = tag('div', { id: 'test', class: 'test' }, 'test');
 
     expect(el.className).toEqual('test');
     expect(el.getAttribute('id')).toEqual('test');
@@ -44,12 +46,14 @@ describe('tag', function () {
   });
 
   it('adds text and DOMElement as children together', () => {
-    container.appendChild(tag('label', [ tag('input'), 'text' ]));
+    container.appendChild(tag('label', [tag('input'), 'text']));
     expect(container.innerHTML).toEqual('<label><input>text</label>');
   });
 
   it('creates DOMElement with string child', () => {
     container.appendChild(tag('div', '<span>text</span><span>text</span>'));
-    expect(container.innerHTML).toEqual('<div><span>text</span><span>text</span></div>');
+    expect(container.innerHTML).toEqual(
+      '<div><span>text</span><span>text</span></div>',
+    );
   });
 });

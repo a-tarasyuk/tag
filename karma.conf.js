@@ -1,11 +1,14 @@
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
-    files: [{
-      pattern: 'test/**/*.spec.js', watched: false,
-    }],
+    files: [
+      {
+        pattern: 'test/**/*.spec.js',
+        watched: false,
+      },
+    ],
 
     preprocessors: {
-      'test/**/*.spec.js': ['rollup']
+      'test/**/*.spec.js': ['rollup'],
     },
 
     frameworks: ['jasmine'],
@@ -18,11 +21,14 @@ module.exports = function(config) {
 
     rollupPreprocessor: {
       plugins: [require('rollup-plugin-buble')()],
-      output: { format: 'iife', name: 'tag', sourcemap: 'inline' }
+      output: { format: 'iife', name: 'tag', sourcemap: 'inline' },
     },
 
     customLaunchers: {
-      ChromeHeadlessNoSandbox: { base: 'ChromeHeadless', flags: ['--no-sandbox'] }
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox'],
+      },
     },
-  })
+  });
 };
