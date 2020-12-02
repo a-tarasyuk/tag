@@ -5,3 +5,5 @@ src
 .travis.yml
 karma.conf.js
 rollup.config.js
+.prettierignore
+.prettierrc.json
